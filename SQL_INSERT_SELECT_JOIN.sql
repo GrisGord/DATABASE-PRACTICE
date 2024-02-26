@@ -222,7 +222,7 @@ SELECT name FROM track t
 WHERE name ~* ' my '
 OR name ~* ' мой ';
 
--- Средняя продолжительность треков по каждому альбому
+-- Средняя продолжительность треков по каждому альбому.
 SELECT album.name album_name, AVG(duration) FROM track
 JOIN album ON track.album_id = album.id
 GROUP BY album.id
